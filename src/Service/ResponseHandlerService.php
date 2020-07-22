@@ -1,5 +1,5 @@
 <?php
-namespace Catcoderphp\ZendCSHandlers\Service;
+namespace Catcoderphp\CustomConfigProvider\Service;
 
 use Spatie\ArrayToXml\ArrayToXml;
 use Zend\Http\Headers;

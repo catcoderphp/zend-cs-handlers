@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Catcoderphp\ZendCSHandlers\Factory\Service;
+namespace Catcoderphp\CustomConfigProvider\Factory\Service;
 
 
-use Catcoderphp\ZendCSHandlers\Service\ResponseHandlerService;
+use Catcoderphp\CustomConfigProvider\Service\ResponseHandlerService;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 

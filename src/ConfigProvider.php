@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Catcoderphp\ZendCSHandlers;
-use Catcoderphp\ZendCSHandlers\Factory\Service\ResponseHandlerServiceFactory;
-use Catcoderphp\ZendCSHandlers\Service\ResponseHandlerService;
+namespace Catcoderphp\CustomConfigProvider;
+use Catcoderphp\CustomConfigProvider\Factory\Service\ResponseHandlerServiceFactory;
+use Catcoderphp\CustomConfigProvider\Service\ResponseHandlerService;
 
 class ConfigProvider
 {

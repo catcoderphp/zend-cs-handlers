@@ -1,5 +1,5 @@
 {
-    "name": "catcoderphp/zend-cs-handlers",
+    "name": "catcoderphp/custom-onfig-provider",
     "description": "Handlers for zend framework",
     "require": {
         "php": "^5.6 || ^7.0",
@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Catcoderphp\\ZendCSHandlers\\":"src/"
+            "Catcoderphp\\CustomConfigProvider\\":"src/"
         }
     }
 }

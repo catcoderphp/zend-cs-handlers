@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Catcoderphp\ZendCSHandlers\Bootstrap;
+namespace Catcoderphp\CustomConfigProvider\Bootstrap;
 
 
 class ErrorHandler

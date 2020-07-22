@@ -1,5 +1,5 @@
 <?php
-namespace Catcoderphp\ZendCSHandlers;
+namespace Catcoderphp\CustomConfigProvider;
 return [
     'service_manager' => [
         'factories' => [
