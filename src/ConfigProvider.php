@@ -8,7 +8,7 @@ use Catcoderphp\CustomConfigProvider\Service\ResponseHandlerService;
 class ConfigProvider
 {
     /**
-     * Return default configuration for catcoder\zendcshandlers.
+     * Return default configuration for Catcoderphp\CustomConfigProvider.
      *
      * @return array
      */
@@ -20,7 +20,7 @@ class ConfigProvider
     }
 
     /**
-     * Return default service mappings for catcoder\zendcshandlers.
+     * Return default service mappings for Catcoderphp\CustomConfigProvider.
      *
      * @return array
      */

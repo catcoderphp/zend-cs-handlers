@@ -1,6 +1,6 @@
 <?php
 
-namespace Catcoderphp\ZendCSHandlers;
+namespace Catcoderphp\CustomConfigProvider;
 
 use Catcoderphp\CustomConfigProvider\ConfigProvider;
 
