@@ -1,0 +1,26 @@
+{
+    "name": "Catcoderphp/ZendCSHandlers",
+    "description": "Handlers for zend framework",
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-cache": "^2.9",
+        "zendframework/zend-mvc": "^3.1",
+        "zendframework/zend-serializer": "^2.9",
+        "spatie/array-to-xml": "^2.12"
+    },
+    "license": [
+        "LGPL-2.1-only",
+        "GPL-3.0-or-later"
+    ],
+    "authors": [
+        {
+            "name": "Catcoder Dev",
+            "email": "catcoder.dev@aol.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Catcoderphp\\ZendCSHandlers\\":"src/"
+        }
+    }
+}
