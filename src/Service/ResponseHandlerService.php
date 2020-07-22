@@ -209,7 +209,7 @@ class ResponseHandlerService
         $this->buildPagination(0, 0, 0, 0);
     }
 
-    public function exception($message,\Exception $exception)
+    public function exception($message,\Throwable $exception)
     {
         $this->setStatusCode(Response::STATUS_CODE_500);
         $this->buildMetaData(
