@@ -6,7 +6,7 @@ namespace Catcoderphp\CustomConfigProvider\Factory\Service;
 
 use Catcoderphp\CustomConfigProvider\Service\ResponseHandlerService;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class ResponseHandlerServiceFactory implements FactoryInterface
 {
