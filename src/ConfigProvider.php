@@ -2,7 +2,9 @@
 
 
 namespace Catcoderphp\CustomConfigProvider;
+use Catcoderphp\CustomConfigProvider\Factory\Service\RequestHandlerServiceFactory;
 use Catcoderphp\CustomConfigProvider\Factory\Service\ResponseHandlerServiceFactory;
+use Catcoderphp\CustomConfigProvider\Service\RequestHandlerService;
 use Catcoderphp\CustomConfigProvider\Service\ResponseHandlerService;
 
 class ConfigProvider
@@ -28,7 +30,8 @@ class ConfigProvider
     {
         return [
             'factories' => [
-                ResponseHandlerService::class => ResponseHandlerServiceFactory::class
+                ResponseHandlerService::class => ResponseHandlerServiceFactory::class,
+                RequestHandlerService::class => RequestHandlerServiceFactory::class
             ],
         ];
     }
