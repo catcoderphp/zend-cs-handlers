@@ -54,6 +54,16 @@ class ResponseHandlerService
         $this->buildPagination(0, 0, 0, 0);
         return $this;
     }
+    
+    public function success($data,$message,$pagination = false)
+    {
+        $this->setData($data);
+        $this->setStatusCode(Response::STATUS_CODE_200);
+        $this->buildMetaData(false, $this->getStatusCode(), $this->getResponse()->getReasonPhrase(), time(), $message);
+        if(!$pagination)
+            $this->buildPagination(0, 0, 0, 0);
+        return $this;
+    }
 
     public function buildMetaData($is_error, $status, $http_status_code, $time, $message)
     {
