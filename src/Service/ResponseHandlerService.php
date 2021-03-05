@@ -5,6 +5,7 @@ use Spatie\ArrayToXml\ArrayToXml;
 use Laminas\Http\Headers;
 use Laminas\Http\Response;
 use Laminas\View\Model\JsonModel;
+use Laminas\Diactoros\Response\JsonResponse;
 
 class ResponseHandlerService
 {
@@ -51,6 +52,7 @@ class ResponseHandlerService
         $this->setStatusCode(Response::STATUS_CODE_404);
         $this->buildMetaData(true, $this->getStatusCode(), $this->getResponse()->getReasonPhrase(), time(), $message);
         $this->buildPagination(0, 0, 0, 0);
+        return $this;
     }
 
     public function buildMetaData($is_error, $status, $http_status_code, $time, $message)
@@ -121,6 +123,10 @@ class ResponseHandlerService
             "Method not available by now"
         );
         $this->buildPagination(0, 0, 0, 0);
+    }
+    
+    public function toJsonResponseForMezzio($headers = []){
+        return new JsonResponse($this->getResponseBody(),$this->getStatusCode(),$headers);
     }
 
     public function toJsonResponse($headers = [])
@@ -193,6 +199,7 @@ class ResponseHandlerService
         );
         $this->setData([]);
         $this->buildPagination(0, 0, 0, 0);
+        return $this;
     }
 
     public function badRequest($message)
@@ -207,6 +214,7 @@ class ResponseHandlerService
         );
         $this->setData([]);
         $this->buildPagination(0, 0, 0, 0);
+        return $this;
     }
 
     public function exception($message,\Throwable $exception)
