@@ -23,6 +23,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-view" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/brick/varexporter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/webimpress/safe-writer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
