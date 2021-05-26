@@ -119,7 +119,7 @@ class MongoConnectionService
     public function checkConnection(): bool
     {
         try {
-            if (is_array($this->config)) {
+            if (!empty($this->config)) {
                 return $this->driverConnection();
             }
             return $this->odmConnection();
