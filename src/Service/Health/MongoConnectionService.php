@@ -49,12 +49,12 @@ class MongoConnectionService implements ConnectionServiceInterface
             $url,
             $this->mongo['user'],
             $this->mongo['password'],
-            $this->mongo['host'],
+            $this->mongo['server'],
             $this->mongo['port']
         ));
 
         $command = new Command(['ping' => 1]);
-        $cursor = $manager->executeCommand($this->mongo['db'], $command)->toArray();
+        $cursor = $manager->executeCommand($this->mongo['dbname'], $command)->toArray();
         return !empty($cursor);
     }
 
