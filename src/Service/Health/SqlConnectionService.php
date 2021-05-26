@@ -4,7 +4,7 @@ namespace Catcoderphp\CustomConfigProvider\Service\Health;
 
 use Exception;
 
-class SqlConnectionService implements ConnectionServiceInterface
+class SqlConnectionService
 {
     /**
      * @var object

@@ -5,7 +5,7 @@ namespace Catcoderphp\CustomConfigProvider\Service\Health;
 use Laminas\Cache\Storage\StorageInterface;
 use Exception;
 
-class RedisConnectionService implements ConnectionServiceInterface
+class RedisConnectionService
 {
     /**
      * @var StorageInterface
