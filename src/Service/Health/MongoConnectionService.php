@@ -20,6 +20,17 @@ class MongoConnectionService implements ConnectionServiceInterface
 
     public function __construct($mongoConf)
     {
+        if (is_object($mongoConf) || is_array($mongoConf)) {
+            if (is_object($mongoConf) && get_class($mongoConf) != 'Doctrine\ODM\MongoDB\DocumentManager') {
+                throw new Exception(
+                    'The supplied argument is not valid.'
+                );
+            }
+        }else{
+            throw new Exception(
+                'The supplied argument is not valid.'
+            );
+        }
         $this->mongo = $mongoConf;
     }
 
