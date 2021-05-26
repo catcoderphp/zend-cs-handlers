@@ -13,7 +13,7 @@ class SqlConnectionServiceFactory
      * @return SqlConnectionService
      * @throws Exception
      */
-    public function __invoke(ContainerInterface $container)
+    public function __invoke(ContainerInterface $container): SqlConnectionService
     {
         if ($container->has('Laminas\Db\Adapter\Adapter')) {
             $adapter = $container->get('Laminas\Db\Adapter\Adapter');
