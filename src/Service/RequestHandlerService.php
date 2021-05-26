@@ -85,4 +85,11 @@ class RequestHandlerService
         $this->client->setParameterGet($get);
         return $this->sendRequest();
     }
+    
+    public function createPostRequestForceJson(array $post, $method, $uri, $options = [], $headers = [])
+    {
+        $this->setUpRequest($method, $uri, $options, $headers);
+        $this->client->setRawBody(json_encode($post));
+        return $this->sendRequest();
+    }
 }
