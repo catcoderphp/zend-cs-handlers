@@ -2,9 +2,10 @@
 
 namespace Catcoderphp\CustomConfigProvider\Service\Health;
 
+use Exception;
 use Laminas\Http\Client;
 
-class EndpointConnectionService
+class EndpointConnectionService implements ConnectionServiceInterface
 {
     /**
      * @var array
@@ -19,9 +20,13 @@ class EndpointConnectionService
     /**
      * @return bool
      */
-    public function endpointConnection(): bool
+    public function checkConnection(): bool
     {
-        return $this->client->send()->isSuccess();
+        try {
+            return $this->client->send()->isSuccess();
+        } catch (Exception $e) {
+            return false;
+        }
     }
 
 }

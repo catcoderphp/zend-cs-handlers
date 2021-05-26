@@ -2,14 +2,14 @@
 
 namespace Catcoderphp\CustomConfigProvider\Service\Health;
 
+use Exception;
 use MongoDB\Driver\Command;
 use MongoDB\Driver\Exception\ConnectionTimeoutException;
-use MongoDB\Driver\Exception\Exception;
 use MongoDB\Driver\Exception\InvalidArgumentException;
 use MongoDB\Driver\Exception\RuntimeException;
 use MongoDB\Driver\Manager;
 
-class MongoConnectionService
+class MongoConnectionService implements ConnectionServiceInterface
 {
     /**
      * Doctrine\ODM\MongoDB\DocumentManager or Array
@@ -63,13 +63,16 @@ class MongoConnectionService
      * @return bool
      * @throws Exception
      */
-    public function mongoConnection(): bool
+    public function checkConnection(): bool
     {
-        if (is_array($this->mongo)) {
-            return $this->driverConnection();
+        try {
+            if (is_array($this->mongo)) {
+                return $this->driverConnection();
+            }
+            return $this->odmConnection();
+        } catch (Exception $e) {
+            return false;
         }
-
-        return $this->odmConnection();
     }
 
 }

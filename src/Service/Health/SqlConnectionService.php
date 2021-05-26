@@ -4,47 +4,53 @@ namespace Catcoderphp\CustomConfigProvider\Service\Health;
 
 use Exception;
 
-class SqlConnectionService
+class SqlConnectionService implements ConnectionServiceInterface
 {
     /**
      * @var object
      */
-    private $driver;
+    private $adapter;
 
     /**
      * Laminas\Db\Adapter\Adapter or Doctrine\ORM\EntityManager
      *
      * AdapterSql constructor.
-     * @param $driver object
+     * @param $adapter object
      * @throws Exception
      */
-    public function __construct($driver)
+    public function __construct($adapter)
     {
-        if (!is_object($driver)) {
+        if (!is_object($adapter)) {
             throw new Exception(
-                'The supplied '. gettype($driver) . ' is not valid.'
+                'The supplied '. gettype($adapter) . ' is not valid.'
             );
         }
 
-        if (!get_class($driver) === 'Laminas\Db\Adapter\Adapter' ||
-            !get_class($driver) === 'Doctrine\ORM\EntityManager') {
+        if (!get_class($adapter) === 'Laminas\Db\Adapter\Adapter' ||
+            !get_class($adapter) === 'Doctrine\ORM\EntityManager') {
             throw new Exception(
-                'The supplied or instantiated driver object does not implement.'
+                'The supplied or instantiated adapter object does not implement.'
             );
         }
 
-        $this->driver = $driver;
+        $this->adapter = $adapter;
     }
 
     /**
      * @return bool
      */
-    public function sqlConnection(): bool
+    public function checkConnection(): bool
     {
-        if (get_class($this->driver) === 'Laminas\Db\Adapter\Adapter') {
-            return $this->driver->driver->getConnection()->isConnected();
+        try {
+            if (get_class($this->adapter) === 'Laminas\Db\Adapter\Adapter') {
+                $connection = $this->adapter->getDriver()->getConnection()->connect();
+                $isConnect = $connection->isConnected();
+                $connection->disconnect();
+                return $isConnect;
+            }
+            return $this->adapter->getConnection()->isConnected();
+        } catch (Exception $e) {
+            return false;
         }
-
-        return $this->driver->getConnection()->connect();
     }
 }

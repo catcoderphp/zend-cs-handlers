@@ -3,8 +3,9 @@
 namespace Catcoderphp\CustomConfigProvider\Service\Health;
 
 use Laminas\Cache\Storage\StorageInterface;
+use Exception;
 
-class RedisConnectionService
+class RedisConnectionService implements ConnectionServiceInterface
 {
     /**
      * @var StorageInterface
@@ -16,10 +17,17 @@ class RedisConnectionService
         $this->storage = $storage;
     }
 
-    public function redisConnection(): bool
+    /**
+     * @return bool
+     */
+    public function checkConnection(): bool
     {
-        $this->storage->setItem('health', true);
-        return $this->storage->getItem('health');
+        try {
+            $this->storage->setItem('health', true);
+            $value = $this->storage->getItem('health');
+            return $value != null && $value == true;
+        } catch (Exception $e) {
+            return false;
+        }
     }
-
 }
