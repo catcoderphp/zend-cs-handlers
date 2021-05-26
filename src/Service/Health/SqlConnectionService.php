@@ -26,10 +26,14 @@ class SqlConnectionService implements ConnectionServiceInterface
             );
         }
 
-        if (!get_class($adapter) === 'Laminas\Db\Adapter\Adapter' ||
-            !get_class($adapter) === 'Doctrine\ORM\EntityManager') {
+        $validAdapters = [
+            'Laminas\Db\Adapter\Adapter',
+            'Doctrine\ORM\EntityManager'
+        ];
+
+        if (!in_array(get_class($adapter), $validAdapters)) {
             throw new Exception(
-                'The supplied or instantiated adapter object does not implement.'
+                'The supplied or instantiated driver object does not implement.'
             );
         }
 
