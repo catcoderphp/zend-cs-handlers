@@ -20,7 +20,60 @@
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/brick/varexporter" />
+      <path value="$PROJECT_DIR$/vendor/webimpress/safe-writer" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-db" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-xcache" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-ext-mongodb" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-wincache" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-apcu" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-memcached" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-memory" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-apc" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-dba" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-filesystem" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-mongodb" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-blackhole" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-redis" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-session" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-zend-server" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-cache-storage-adapter-memcache" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/mongodb/mongodb" />
+      <path value="$PROJECT_DIR$/vendor/jean85/pretty-package-versions" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/mongodb-odm" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
 </project>
