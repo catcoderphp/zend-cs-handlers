@@ -6,7 +6,7 @@ use Exception;
 use MongoDB\Driver\Command;
 use MongoDB\Driver\Manager;
 
-class MongoConnectionService implements ConnectionServiceInterface
+class MongoConnectionService
 {
     /**
      * Doctrine\ODM\MongoDB\DocumentManager or Array
