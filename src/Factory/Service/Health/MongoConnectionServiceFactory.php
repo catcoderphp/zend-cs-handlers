@@ -13,15 +13,15 @@ class MongoConnectionServiceFactory
      * @return MongoConnectionService
      * @throws Exception
      */
-    public function __invoke(ContainerInterface $container)
+    public function __invoke(ContainerInterface $container): MongoConnectionService
     {
         $mongoConf = $container->get('config');
         if (isset($mongoConf['mongo'])){
-            return new MongoConnectionService($mongoConf);
+            return new MongoConnectionService($mongoConf['mongo']);
         }
 
         if ($container->has('Doctrine\ODM\MongoDB\DocumentManager')) {
-            return new MongoConnectionService($mongoConf);
+            return new MongoConnectionService($container->get('Doctrine\ODM\MongoDB\DocumentManager'));
         }
 
         throw new Exception(
