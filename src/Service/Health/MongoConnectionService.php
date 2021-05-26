@@ -114,7 +114,6 @@ class MongoConnectionService
 
     /**
      * @return bool
-     * @throws Exception|\MongoDB\Driver\Exception\Exception
      */
     public function checkConnection(): bool
     {
@@ -124,6 +123,8 @@ class MongoConnectionService
             }
             return $this->odmConnection();
         } catch (Exception $e) {
+            return false;
+        } catch (\MongoDB\Driver\Exception\Exception $e) {
             return false;
         }
     }
